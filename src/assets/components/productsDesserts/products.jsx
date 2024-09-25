@@ -15,6 +15,12 @@ export function ProductsDesserts() {
             Add to Cart
           </button>
         </figure>
+
+        <section className="information-cardProductDessert">
+          <span className="typeProduct">Waffle</span>
+          <span className="nameProduct">Waffle with Berries</span>
+          <span className="priceProduct">$6.50</span>
+        </section>
       </article>
     </>
   );
