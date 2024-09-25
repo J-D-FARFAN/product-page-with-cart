@@ -7,7 +7,9 @@ function App() {
       <article className="bx-column-productDesserts">
         <h1 className="title">Desserts</h1>
 
-        <ProductsDesserts />
+        <section className="bx-productsDesserts">
+          <ProductsDesserts />
+        </section>
       </article>
 
       <article className="bx-column-section-productDessertsCart">
