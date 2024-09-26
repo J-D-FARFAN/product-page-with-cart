@@ -1,7 +1,11 @@
 import svgIconCart from "../../images/icon-add-to-cart.svg";
-import imageProduct from "../../images/image-cake-desktop.jpg";
 
-export function ProductsDesserts() {
+export function ProductsDesserts({
+  typeProduct,
+  nameProduct,
+  priceProduct,
+  imageProduct,
+}) {
   return (
     <>
       <article className="content-cardProductDessert">
@@ -17,9 +21,9 @@ export function ProductsDesserts() {
         </figure>
 
         <section className="information-cardProductDessert">
-          <span className="typeProduct">Waffle</span>
-          <span className="nameProduct">Waffle with Berries</span>
-          <span className="priceProduct">$6.50</span>
+          <span className="typeProduct">{typeProduct}</span>
+          <span className="nameProduct">{nameProduct}</span>
+          <span className="priceProduct">${priceProduct}</span>
         </section>
       </article>
     </>

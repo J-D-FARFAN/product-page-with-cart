@@ -1,5 +1,6 @@
 import "./App.css";
 import { ProductsDesserts } from "./assets/components/productsDesserts/products";
+import data from "./data.json";
 
 function App() {
   return (
@@ -8,7 +9,16 @@ function App() {
         <h1 className="title">Desserts</h1>
 
         <section className="bx-productsDesserts">
-          <ProductsDesserts />
+          {data.map((products) => {
+            return (
+              <ProductsDesserts
+                typeProduct={products.category}
+                nameProduct={products.name}
+                priceProduct={products.price.toFixed(2)}
+                imageProduct={products.image.desktop}
+              />
+            );
+          })}
         </section>
       </article>
 
