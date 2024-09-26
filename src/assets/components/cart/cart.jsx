@@ -1,4 +1,4 @@
-import svgIconCart from "../../images/illustration-empty-cart.svg";
+import svgIconCart from "../../../../public/images/illustration-empty-cart.svg";
 
 export function CartProduct() {
   return (

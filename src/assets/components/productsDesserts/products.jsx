@@ -1,4 +1,4 @@
-import svgIconCart from "../../images/icon-add-to-cart.svg";
+import svgIconCart from "../../../../public/images/icon-add-to-cart.svg";
 
 export function ProductsDesserts({
   typeProduct,
