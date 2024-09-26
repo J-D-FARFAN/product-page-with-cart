@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+@import url(assets/components/productsDesserts/products.css);
+
+:root{
+    /*Typography*/
+    --fontF: "Red Hat Text", system-ui;
+    --prs-1: 40px;
+    --prs-2: 24px;
+    --prs-3: 16px;
+    --prs-4: 14px;
+
+    /*Spacing*/
+    --spc-prs-1: 88px;
+    --spc-prs-2: 40px;
+    --spc-prs-3: 32px;
+    --spc-prs-4: 24px;
+    --spc-prs-5: 16px;
+    --spc-prs-6: 12px;
+    --spc-prs-7: 8px;
+    --spc-prs-8: 4px;
+
+    /*Colors*/
+    --colorRed: #C73B0F;
+    --colorGreen: #1EA575;
+    --rose-900: #260F08;
+    --rose-500: #87635A;
+    --rose-400: #AD8A85;
+    --rose-300: #CAAFA7;
+    --rose-100: #F5EEEC;
+    --rose-50: #FCF8F6;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fontF);
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    background-color: var(--rose-50);
+
+    .content__all{
+        width: 1216px;
+        height: 100%;
+        padding: var(--spc-prs-1) 0;
+    }
+}

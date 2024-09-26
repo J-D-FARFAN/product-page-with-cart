@@ -1,0 +1,61 @@
+@import url(../../../index.css);
+
+.content-cardProductDessert{
+    width: 250.67px;
+    height: 347px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .image-presentationProductDessert{
+        position: relative;
+        height: 262px;
+
+        .bx-presentationDesserts{
+            height: 240px;
+            border-radius: var(--spc-prs-7);
+            overflow: hidden;
+
+            .productDessert{width: 100%;}
+        }
+
+        .addCart{
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+
+            width: 160px;
+            height: 44px;
+            border-radius: 999px;
+            outline: none;
+            border: 1px solid var(--rose-400);
+            background-color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            gap: var(--spc-prs-7);
+            font-size: var(--prs-4);
+            font-weight: 600;
+            transition: .3s ease;
+
+            &:hover{
+                border-color: var(--colorRed);
+                color: var(--colorRed);
+            }
+        }
+    }
+
+    .information-cardProductDessert{
+        display: flex;
+        flex-direction: column;
+        gap: var(--spc-prs-8);
+
+        .typeProduct{font-size: var(--prs-4); color: var(--rose-500);}
+        .nameProduct, .priceProduct{font-size: var(--prs-3); color: var(--rose-900); font-weight: 600;}
+        .priceProduct{color: var(--colorRed);}
+    }
+}
