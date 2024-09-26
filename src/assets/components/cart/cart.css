@@ -1,0 +1,27 @@
+@import url(../../../index.css);
+
+.bx-cartProducts{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--spc-prs-4);
+
+    .titleCart{
+        display: block;
+        font-size: var(--prs-2);
+        color: var(--colorRed);
+        font-weight: bold;
+    }
+
+    .bx-iconCartEmpty{
+        text-align: center;
+        .descriptionEmptyCart{
+            display: block;
+            color: var(--rose-500);
+            font-size: var(--prs-4);
+            font-weight: 550;
+        }
+    }
+}

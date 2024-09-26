@@ -1,5 +1,6 @@
 import "./App.css";
 import { ProductsDesserts } from "./assets/components/productsDesserts/products";
+import { CartProduct } from "./assets/components/cart/cart";
 import data from "./data.json";
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
       </article>
 
       <article className="bx-column-section-productDessertsCart">
-        {/*COMPONENTE CARRITO*/}
+        <CartProduct />
       </article>
     </>
   );

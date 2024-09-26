@@ -19,3 +19,11 @@
         gap: var(--spc-prs-3);
     }
 }
+
+.bx-column-section-productDessertsCart{
+    width: 384px;
+    height: 279px;
+    background-color: white;
+    border-radius: var(--spc-prs-6);
+    padding: var(--spc-prs-4);
+}
