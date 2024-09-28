@@ -103,6 +103,7 @@ body{
 @media screen and (min-width: 310px) and (max-width: 448px){
     body{
         .content__all{
+            padding: var(--spc-prs-3);
             .bx-column-productDesserts{
                 .bx-productsDesserts{
                     grid-template-columns: 1fr;
