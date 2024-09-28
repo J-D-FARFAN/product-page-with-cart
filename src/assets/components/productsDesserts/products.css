@@ -17,7 +17,7 @@
             border-radius: var(--spc-prs-7);
             overflow: hidden;
 
-            .productDessert{width: 100%;}
+            .productDessert{width: 100%; border-radius: var(--spc-prs-7);}
         }
 
         .addCart{

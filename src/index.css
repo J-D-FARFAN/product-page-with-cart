@@ -52,3 +52,67 @@ body{
         gap: var(--spc-prs-3);
     }
 }
+
+/*LAYOUTS*/
+
+/*TABLETS*/
+@media screen and (min-width: 375px) and (max-width: 1199px){
+    body{
+        .content__all{
+            width: 100%;
+            flex-direction: column;
+            padding: var(--spc-prs-2);
+
+            .bx-column-productDesserts{
+                width: 100%;
+                
+                .bx-productsDesserts{
+                    gap: 1.4rem;
+
+                    .content-cardProductDessert{
+                        width: 213.33px;
+                        height: 309px;
+                        
+                        .image-presentationProductDessert{
+                            height: 234px;
+
+                            .bx-presentationDesserts{
+                                height: 212px;
+                            }
+
+                            .addCart{
+                                bottom: 12px;
+                            }
+                        }
+                    }
+                }
+                
+            }
+
+            .bx-column-section-productDessertsCart{
+                width: 100%;
+                height: 100%;
+            }
+            
+        }
+    }
+}
+
+/*MOBILE*/
+
+@media screen and (max-width: 376px){
+    body{
+        .content__all{
+            .bx-column-productDesserts{
+                .bx-productsDesserts{
+                    grid-template-columns: 1fr;
+                    grid-template-rows: repeat(9, 1fr);
+
+                    .content-cardProductDessert{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
