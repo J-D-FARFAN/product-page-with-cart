@@ -21,6 +21,7 @@
         }
 
         .addCart{
+            user-select: none;
             position: absolute;
             bottom: 0;
             left: 50%;
@@ -45,6 +46,32 @@
             &:hover{
                 border-color: var(--colorRed);
                 color: var(--colorRed);
+            }
+        }
+
+        .addCart.addedProdutcCart{
+            justify-content: space-between;
+            color: white !important;
+            background-color: var(--colorRed);
+            border-color: transparent;
+            padding: 0 var(--spc-prs-5);
+
+            .content-iconAdded-product{
+                width: 20px;
+                height: 20px;
+                border: 2px solid white;
+                border-radius: 50%;
+
+                display: grid;
+                place-items: center;
+                transition: .3s ease all;
+                
+                .iconAddedProduct{.iconAddedProduct-color{fill: white;}}
+
+                &:hover{
+                    background-color: white;
+                    .iconAddedProduct{.iconAddedProduct-color{fill: var(--colorRed);}}
+                }
             }
         }
     }
