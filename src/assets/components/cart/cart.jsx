@@ -1,6 +1,10 @@
 import svgIconCart from "../../../../public/images/illustration-empty-cart.svg";
 
-export function CartProduct({ cartItems }) {
+export function CartProduct({ cartItems, removeFromCartAll }) {
+  const handleRemove = (product) => {
+    removeFromCartAll(product, "decrement");
+  };
+
   return (
     <article className="bx-cartProducts">
       <span className="titleCart">Your Cart ({cartItems.length})</span>
@@ -14,8 +18,8 @@ export function CartProduct({ cartItems }) {
       ) : (
         <article className="cartItemsList">
           {cartItems.map((item, index) => (
-            <article className="content__all-productCartList">
-              <section key={index} className="cartItem">
+            <article className="content__all-productCartList" key={index}>
+              <section className="cartItem">
                 <div className="cartItemDetails">
                   <span className="cartItemName">{item.name}</span>
 
@@ -31,7 +35,10 @@ export function CartProduct({ cartItems }) {
                   </div>
                 </div>
 
-                <div className="bx-iconRemoveProduct">
+                <div
+                  className="bx-iconRemoveProduct"
+                  onClick={() => handleRemove(item)}
+                >
                   <svg
                     className="iconRemove"
                     xmlns="http://www.w3.org/2000/svg"
