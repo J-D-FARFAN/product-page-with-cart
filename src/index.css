@@ -111,8 +111,16 @@ body{
 
                     .content-cardProductDessert{
                         width: 100%;
+
+                        .image-presentationProductDessert{
+                            .bx-presentationDesserts{
+                                .productDessert{height: 212px;}
+                            }
+                        }
                     }
                 }
+
+                .addCart{bottom: 4px !important;}
             }
         }
     }

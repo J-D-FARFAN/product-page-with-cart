@@ -13,11 +13,11 @@
         height: 262px;
 
         .bx-presentationDesserts{
-            height: 240px;
+            width: 100%;
             border-radius: var(--spc-prs-7);
             overflow: hidden;
 
-            .productDessert{width: 100%; border-radius: var(--spc-prs-7); border: 3px solid transparent; transition: .3s ease;}
+            .productDessert{width: 100%; border-radius: var(--spc-prs-7); border: 3px solid transparent; transition: .3s ease; object-fit: cover;}
             .productDessert.productDessertBorder{border-color: var(--colorRed);}
         }
 
