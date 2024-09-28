@@ -6,11 +6,18 @@ export function ProductsDesserts({
   nameProduct,
   priceProduct,
   imageProduct,
+  addToCart,
 }) {
   const [btnState, setBtnState] = useState(false);
 
   const handleClick = () => {
     setBtnState(true);
+    addToCart({
+      typeProduct,
+      name: nameProduct,
+      price: parseFloat(priceProduct),
+      image: imageProduct,
+    });
   };
 
   const btnStateAdded = btnState ? "addCart addedProdutcCart" : "addCart";

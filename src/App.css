@@ -22,8 +22,9 @@
 
 .bx-column-section-productDessertsCart{
     width: 384px;
-    height: 279px;
+    height: fit-content;
     background-color: white;
     border-radius: var(--spc-prs-6);
     padding: var(--spc-prs-4);
+    transition: .3s ease all;
 }
