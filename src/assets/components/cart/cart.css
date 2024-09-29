@@ -32,8 +32,8 @@
         .hiddenProductCart{
             max-height: 270px;
             overflow: scroll;
-            scrollbar-width: thin;
-            scrollbar-color: transparent transparent;
+
+            &::-webkit-scrollbar{display: none;}
 
             .content__all-productCartList{
 
