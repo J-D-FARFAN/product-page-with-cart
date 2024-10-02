@@ -65,6 +65,11 @@ function App() {
     }));
   };
 
+  const defualtNewOrder = () => {
+    setCartItems([]);
+    setProductStates([]);
+  };
+
   // Efecto para restablecer todos los estados cuando el carrito está vacío
   useEffect(() => {
     if (cartItems.length === 0) {
@@ -101,6 +106,7 @@ function App() {
         <CartProduct
           cartItems={cartItems}
           removeFromCartAll={removeFromCartAll}
+          defualtNewOrder={defualtNewOrder}
         />
       </article>
     </>

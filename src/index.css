@@ -122,6 +122,38 @@ body{
 
                 .addCart{bottom: 4px !important;}
             }
+
+            .bx-column-section-productDessertsCart{
+                .bx-modelCompleteOrderProduct{
+                    width: 100%;
+                    top: 64.5%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0;
+
+                    .contentAllProductOrder{
+                        width: 100%;
+
+                        .bx-productOrderCart{
+                            max-height: 100px;
+
+                            .productOrderCart{
+                                .orderCard-product{
+                                    .infoProductOrderCart{
+                                        .infoProduct{
+                                            .titleProduct{
+                                                width: 100%;
+                                                overflow: scroll;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

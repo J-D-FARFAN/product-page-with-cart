@@ -1,6 +1,8 @@
 import svgIconCart from "../../../../public/images/illustration-empty-cart.svg";
+import iconComplete from "../../../../public/images/icon-order-confirmed.svg";
+import { useState } from "react";
 
-export function CartProduct({ cartItems, removeFromCartAll }) {
+export function CartProduct({ cartItems, removeFromCartAll, defualtNewOrder }) {
   const handleRemove = (product) => {
     removeFromCartAll(product, "decrement");
   };
@@ -9,6 +11,23 @@ export function CartProduct({ cartItems, removeFromCartAll }) {
     (acc, item) => acc + item.price * item.quantity,
     0
   );
+
+  const [modal, setModal] = useState(false);
+
+  const showModal = modal
+    ? "bx-modelCompleteOrderProduct activeModal"
+    : "bx-modelCompleteOrderProduct";
+
+  const blurPageModal = modal ? "blurModal activeBlurModal" : "blurModal";
+
+  const handleClick = () => {
+    setModal(true); // Abrir modal al confirmar pedido
+  };
+
+  const newOrder = () => {
+    defualtNewOrder();
+    setModal(false); // Cerrar modal al iniciar nueva orden
+  };
 
   return (
     <article className="bx-cartProducts">
@@ -96,11 +115,66 @@ export function CartProduct({ cartItems, removeFromCartAll }) {
                 delivery
               </span>
             </div>
-
-            <button className="confirmOrder">Confirm Order</button>
+            <button className="confirmOrder" onClick={handleClick}>
+              Confirm Order
+            </button>
           </section>
         </article>
       )}
+
+      <section className={showModal}>
+        <img src={iconComplete} alt="Order Completed" />
+
+        <header className="introductionModal">
+          <span className="titleModal">Order Confirmed</span>
+          <span className="descriptionModal">We hope you enjoy your food!</span>
+        </header>
+
+        <article className="contentAllProductOrder">
+          <section className="bx-productOrderCart">
+            {cartItems.map((item, index) => (
+              <section className="productOrderCart" key={index}>
+                <div className="orderCard-product">
+                  <figure className="infoProductOrderCart">
+                    <div className="contentImageProduct">
+                      <img
+                        className="imageProductOrderCart"
+                        src={item.image}
+                        alt={item.name}
+                      />
+                    </div>
+
+                    <section className="infoProduct">
+                      <span className="titleProduct">{item.name}</span>
+                      <div className="bx-quantity-order__price">
+                        <span className="quantity">x{item.quantity}</span>
+                        <span className="priceIndividual">
+                          @ ${item.price.toFixed(2)}
+                        </span>
+                      </div>
+                    </section>
+                  </figure>
+
+                  <span className="priceProduct">
+                    ${(item.price * item.quantity).toFixed(2)}
+                  </span>
+                </div>
+                <span className="line"></span>
+              </section>
+            ))}
+          </section>
+
+          <section className="bx-priceTotal">
+            <span className="orderTotal">Order Total</span>
+            <span className="priceTotal">${totalPrice.toFixed(2)}</span>
+          </section>
+        </article>
+
+        <button className="newOrder" onClick={newOrder}>
+          Start New Order
+        </button>
+      </section>
+      <span className={blurPageModal}></span>
     </article>
   );
 }

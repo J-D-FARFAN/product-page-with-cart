@@ -143,4 +143,165 @@
             }
         }
     }
+
+    .bx-modelCompleteOrderProduct{
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: var(--spc-prs-2);
+        border-radius: var(--spc-prs-6);
+        background-color: white;
+        z-index: 4;
+
+        .introductionModal{
+            margin-top: var(--spc-prs-4);
+            display: flex;
+            flex-direction: column;
+            gap: var(--spc-prs-7);
+
+            .titleModal{
+                color: var(--rose-900);
+                font-size: var(--prs-1);
+                font-weight: bold;
+                
+            }
+
+            .descriptionModal{
+                color: var(--rose-500);
+                font-size: var(--prs-3);
+            }
+        }
+
+        .contentAllProductOrder{
+            width: 512px;
+            padding: var(--spc-prs-4);
+            margin: var(--spc-prs-3) 0;
+            background-color: var(--rose-50);
+            border-radius: var(--spc-prs-7);
+
+
+            .bx-productOrderCart{
+                height: fit-content;
+                max-height: 300px;
+                overflow-y: scroll;
+
+                &::-webkit-scrollbar{display: none;}
+                
+    
+                .productOrderCart{
+                    .orderCard-product{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+    
+                        .infoProductOrderCart{
+                            display: flex;
+                            align-items: center;
+                            gap: var(--spc-prs-5);
+    
+                            .contentImageProduct{
+                                width: 48px;
+                                height: 48px;
+    
+                                .imageProductOrderCart{
+                                    width: 100%;
+                                    border-radius: var(--spc-prs-8);
+                                }
+                            }
+    
+                            .infoProduct{
+                                display: flex;
+                                flex-direction: column;
+                                gap: var(--spc-prs-7);
+    
+                                .titleProduct{
+                                    color: var(--rose-900);
+                                    font-size: var(--prs-4);
+                                    font-weight: 600;
+                                }
+    
+                                .bx-quantity-order__price{
+                                    display: flex;
+                                    gap: var(--spc-prs-7);
+    
+                                    .quantity{
+                                        color: var(--colorRed);
+                                        font-weight: 650;
+                                    }
+    
+                                    .priceIndividual{
+                                        color: var(--rose-500);
+                                    }
+                                }
+                            }
+                        }
+    
+                        .priceProduct{
+                            font-size: var(--prs-3);
+                            font-weight: 650;
+                            color: var(--rose-900);
+                        }
+                    }
+    
+                    .line{
+                        display: block;
+                        width: 100%;
+                        height: 1px;
+                        border: 1px solid var(--rose-100);
+                        margin: var(--spc-prs-4) 0;
+                    }
+                }
+            }
+
+            .bx-priceTotal{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .orderTotal{
+                    font-size: var(--prs-4);
+                    color: var(--rose-900);
+                }
+
+                .priceTotal{
+                    font-weight: bold;
+                    color: var(--rose-900);
+                    font-size: var(--prs-2);
+                }
+            }
+        }
+
+        .newOrder{
+            width: 100%;
+            height: 53px;
+            border-radius: 999px;
+            outline: none;
+            border: none;
+            background-color: var(--colorRed);
+            color: white;
+            font-size: var(--prs-3);
+            font-weight: 550;
+            cursor: pointer;
+            transition: .3s ease;
+
+            &:hover{background-color: brown;}
+        }
+
+        
+    }
+
+    .blurModal{
+        position: fixed;
+        display: none;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background-color: hsl(0, 0%, 0%, 50%);
+    }
+    
+    .bx-modelCompleteOrderProduct.activeModal{display: block;}
+    .blurModal.activeBlurModal{display: block;}
 }
