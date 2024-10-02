@@ -144,6 +144,7 @@ body{
                                         .infoProduct{
                                             .titleProduct{
                                                 width: 100%;
+                                                border: 2px solid red;
                                                 overflow: scroll;
                                             }
                                         }
